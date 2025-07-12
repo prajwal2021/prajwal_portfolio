@@ -17,7 +17,7 @@ export const Connect = () => {
   };
 
   return (
-    <section id="connect" className="flex flex-col items-center justify-center py-20 px-4">
+    <section id="connect" className="flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
       <h2 className="text-4xl font-bold text-white mb-8">Get in Touch - Let's Connect</h2>
       <form
         onSubmit={handleSubmit}
@@ -60,6 +60,21 @@ export const Connect = () => {
           <div className="text-green-400 text-center mt-2">Thank you for reaching out!</div>
         )}
       </form>
+
+      <div className="w-full h-full absolute">
+        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover" style={{ top: '50px' }}>
+          <video
+            className="w-full h-auto"
+            preload="false"
+            playsInline
+            loop
+            muted
+            autoPlay
+          >
+            <source src="/videos/planet.webm" type="video/webm" />
+          </video>
+        </div>
+      </div>
     </section>
   );
 }; 

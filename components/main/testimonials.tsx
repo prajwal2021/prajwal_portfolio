@@ -32,7 +32,7 @@ export const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-24 px-4 md:px-0 flex flex-col items-center">
+    <section id="testimonials" className="py-24 px-4 md:px-0 flex flex-col items-center relative overflow-hidden">
       <h2 className="text-4xl font-bold text-white text-center mb-12">What People Say About Me?</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl items-start">
         {testimonials.map((t, i) => (
@@ -74,6 +74,21 @@ export const Testimonials = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="w-full h-full absolute">
+        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
+          <video
+            className="w-full h-auto"
+            preload="false"
+            playsInline
+            loop
+            muted
+            autoPlay
+          >
+            <source src="/videos/move.webm" type="video/webm" />
+          </video>
+        </div>
       </div>
     </section>
   );

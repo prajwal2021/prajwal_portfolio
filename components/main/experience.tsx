@@ -39,13 +39,13 @@ export const Experience = () => {
             </h3>
             <div className="flex items-center text-gray-300 mb-2">
               <span className="mr-2">📅</span>
-              <span>January 2023 - Present</span>
+              <span>Febuary - August 2023</span>
             </div>
             
             <ul className="list-disc ml-6 text-lg text-gray-200 space-y-1">
-              <li>Developed and maintained user-facing features for the Hostinger website.</li>
-              <li>Collaborated closely with UI/UX designers to ensure seamless user experiences.</li>
-              <li>Optimized web applications for maximum speed and scalability.</li>
+              <li>Assisted in front-end development using Angular, enhancing UI components for real-world applications.</li>
+              <li>Contributed to code maintenance and debugging in .NET APIs, ensuring smooth integration with backend systems.</li>
+              <li>Gained hands-on experience with SQL and participated in data validation for key modules in the billing platform.</li>
             </ul>
           </div>
         </div>
@@ -67,13 +67,13 @@ export const Experience = () => {
             </h3>
             <div className="flex items-center text-gray-300 mb-2">
               <span className="mr-2">📅</span>
-              <span>June 2020 - December 2023</span>
+              <span>September 2023 - Present</span>
             </div>
           
             <ul className="list-disc ml-6 text-lg text-gray-200 space-y-1">
-              <li>Led the development of  applications, focusing on scalability.</li>
-              <li>Worked with backend engineers to integrate APIs seamlessly with the frontend.</li>
-              <li>Contributed to open-source projects that were used with the Docker ecosystem.</li>
+              <li>Built and integrated Venmo payment support into a production-grade platform using secure SDK and API workflows.</li>
+              <li>Executed the migration of critical databases from MSSQL to PostgreSQL, including schema and procedure refactoring.</li>
+              <li>Built and maintained REST APIs, SOAP services, and legacy web applications using .NET Framework and .NET Core.</li>
             </ul>
           </div>
         </div>
