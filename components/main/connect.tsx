@@ -61,11 +61,11 @@ export const Connect = () => {
         )}
       </form>
 
-      <div className="w-full h-full absolute">
-        <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover" style={{ top: '50px' }}>
+      <div className="w-full h-full absolute top-0 left-0">
+        <div className="w-full h-full z-[-1] opacity-40 absolute flex items-center justify-center">
           <video
-            className="w-full h-auto"
-            preload="false"
+            className="w-full h-full object-cover"
+            preload="none"
             playsInline
             loop
             muted

@@ -17,11 +17,9 @@ export const HeroContent = () => {
       skillsSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const scrollToExperience = () => {
-    const experienceSection = document.getElementById('experience');
-    if (experienceSection) {
-      experienceSection.scrollIntoView({ behavior: 'smooth' });
-    }
+
+  const openResume = () => {
+    window.open('/skills/resume.pdf', '_blank');
   };
 
   return (
@@ -62,13 +60,24 @@ export const HeroContent = () => {
           Angular, .NET, SQL, PostgreSQL, AWS and Next.js, Check out my projects and skills.
         </motion.p>
 
-        <motion.button
+        <motion.div
           variants={slideInFromLeft(1)}
-          onClick={scrollToExperience}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="flex gap-4"
         >
-          Learn more
-        </motion.button>
+          <button
+            onClick={openResume}
+            className="py-2 button-primary text-center text-white cursor-pointer rounded-lg px-6"
+          >
+            Resume
+          </button>
+          {/* <a
+            href="/skills/resume.pdf"
+            download="Prajwal_Resume.pdf"
+            className="py-2 px-6 text-center text-white cursor-pointer rounded-lg border border-[#7042f88b] hover:bg-[#7042f88b] transition-all"
+          >
+            Download CV
+          </a> */}
+        </motion.div>
       </div>
 
       <motion.div

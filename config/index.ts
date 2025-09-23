@@ -39,3 +39,8 @@ export const siteConfig: Metadata = {
     url: "https://github.com/sanidhyy",
   },
 } as const;
+
+export const appConfig = {
+  /** Enable or disable smooth scrolling using Lenis */
+  smoothScroll: true,
+} as const;

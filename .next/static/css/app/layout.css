@@ -556,6 +556,9 @@ video {
 .z-\[-10\]{
   z-index: -10;
 }
+.z-\[-1\]{
+  z-index: -1;
+}
 .z-\[20\]{
   z-index: 20;
 }
@@ -727,9 +730,6 @@ video {
 }
 .max-w-7xl{
   max-width: 80rem;
-}
-.max-w-\[200px\]{
-  max-width: 200px;
 }
 .max-w-\[600px\]{
   max-width: 600px;
@@ -984,6 +984,10 @@ video {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .px-\[10px\]{
   padding-left: 10px;
   padding-right: 10px;
@@ -1130,6 +1134,9 @@ video {
 .opacity-30{
   opacity: 0.3;
 }
+.opacity-40{
+  opacity: 0.4;
+}
 .opacity-\[0\.9\]{
   opacity: 0.9;
 }
@@ -1226,6 +1233,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.hover\:bg-\[\#7042f88b\]:hover{
+  background-color: #7042f88b;
+}
+
 .hover\:text-\[rgb\(112\2c 66\2c 248\)\]:hover{
   --tw-text-opacity: 1;
   color: rgb(112 66 248 / var(--tw-text-opacity));
@@ -1295,6 +1306,28 @@ html {
   }
 }
 
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/lenis.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+} 
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[14].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
   \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/

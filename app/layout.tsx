@@ -5,10 +5,12 @@ import type { PropsWithChildren } from "react";
 import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
+import "./lenis.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,10 +37,12 @@ export default function RootLayout({ children }: PropsWithChildren) {
           inter.className
         )}
       >
+        <SmoothScrollProvider>
         <StarsCanvas />
         <Navbar />
         {children}
         <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
