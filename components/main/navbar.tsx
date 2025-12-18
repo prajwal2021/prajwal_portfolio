@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,12 +9,13 @@ import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
     // If we're not on the home page, navigate to home first with hash
-    if (pathname !== '/') {
+    if (typeof window !== 'undefined' && pathname !== '/') {
       e.preventDefault();
-      window.location.href = `/${hash}`;
+      router.push(`/${hash}`);
     }
   };
 
@@ -44,7 +45,7 @@ export const Navbar = () => {
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.title}
-                href={pathname === '/' ? link.link : `/${link.link}`}
+                href={`/${link.link}`}
                 onClick={(e) => handleNavLinkClick(e, link.link)}
                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition px-2"
               >
@@ -94,7 +95,7 @@ export const Navbar = () => {
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.title}
-                href={pathname === '/' ? link.link : `/${link.link}`}
+                href={`/${link.link}`}
                 onClick={(e) => {
                   handleNavLinkClick(e, link.link);
                   setIsMobileMenuOpen(false);
