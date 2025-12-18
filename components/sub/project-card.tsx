@@ -5,20 +5,18 @@ type ProjectCardProps = {
   src: string;
   title: string;
   description: string;
-  link: string;
+  href: string;
 };
 
 export const ProjectCard = ({
   src,
   title,
   description,
-  link,
+  href,
 }: ProjectCardProps) => {
   return (
     <Link
-      href={link}
-      target="_blank"
-      rel="noreferrer noopener"
+      href={href}
       className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]"
     >
       <div className="w-full h-60 mx-auto flex items-center justify-center bg-black/30">
