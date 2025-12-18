@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const Connect = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -19,6 +24,7 @@ export const Connect = () => {
   return (
     <section id="connect" className="flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
       <h2 className="text-4xl font-bold text-white mb-8">Get in Touch - Let's Connect</h2>
+      {mounted && (
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-black/40 rounded-xl p-8 flex flex-col gap-6 shadow-lg border border-[#232329]"
@@ -60,6 +66,10 @@ export const Connect = () => {
           <div className="text-green-400 text-center mt-2">Thank you for reaching out!</div>
         )}
       </form>
+      )}
+      {!mounted && (
+        <div className="w-full max-w-lg bg-black/40 rounded-xl p-8 flex flex-col gap-6 shadow-lg border border-[#232329] min-h-[400px]" />
+      )}
 
       <div className="w-full h-full absolute top-0 left-0">
         <div className="w-full h-full z-[-1] opacity-40 absolute flex items-center justify-center">
@@ -70,6 +80,7 @@ export const Connect = () => {
             loop
             muted
             autoPlay
+            suppressHydrationWarning
           >
             <source src="/videos/planet.webm" type="video/webm" />
           </video>

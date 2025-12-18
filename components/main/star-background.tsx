@@ -3,7 +3,7 @@
 import { Points, PointMaterial } from "@react-three/drei";
 import { Canvas, type PointsProps, useFrame } from "@react-three/fiber";
 import * as random from "maath/random";
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, Suspense, useEffect } from "react";
 import type { Points as PointsType } from "three";
 
 export const StarBackground = (props: PointsProps) => {
@@ -40,12 +40,24 @@ export const StarBackground = (props: PointsProps) => {
   );
 };
 
-export const StarsCanvas = () => (
-  <div className="w-full h-auto fixed inset-0 -z-10">
-    <Canvas camera={{ position: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <StarBackground />
-      </Suspense>
-    </Canvas>
-  </div>
-);
+export const StarsCanvas = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="w-full h-auto fixed inset-0 -z-10" />;
+  }
+
+  return (
+    <div className="w-full h-auto fixed inset-0 -z-10">
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <Suspense fallback={null}>
+          <StarBackground />
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+};

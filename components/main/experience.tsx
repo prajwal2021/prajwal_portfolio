@@ -89,6 +89,7 @@ export const Experience = () => {
             loop
             muted
             autoPlay
+            suppressHydrationWarning
           >
             <source src="/videos/blackhole.webm" type="video/webm" />
           </video>
