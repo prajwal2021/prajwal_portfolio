@@ -1,11 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import Head from "next/head";
 import type { PropsWithChildren } from "react";
 
-import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
+import { ExternalStyles } from "@/components/providers/external-styles";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
@@ -27,30 +26,23 @@ export const metadata: Metadata = {
       { url: "/favicon.ico", type: "image/x-icon" },
     ],
   },
-  // The CSS is now included in the Head component below
+  // External CSS is included in the head tag
 };
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
-      <Head>
-        <link 
-          rel="stylesheet" 
-          type='text/css' 
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" 
-        />
-      </Head>
       <body
         className={cn(
           "bg-[#030014] overflow-y-scroll overflow-x-hidden",
           inter.className
         )}
       >
+        <ExternalStyles />
         <SmoothScrollProvider>
         <StarsCanvas />
         <Navbar />
         {children}
-        <Footer />
         </SmoothScrollProvider>
       </body>
     </html>

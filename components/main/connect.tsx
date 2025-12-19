@@ -18,7 +18,7 @@ export const Connect = () => {
 
   return (
     <section id="connect" className="flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
-      <h2 className="text-4xl font-bold text-white mb-8">Get in Touch - Let's Connect</h2>
+      <h2 className="text-4xl font-bold text-white mb-8">Get in Touch - Let&apos;s Connect</h2>
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-lg bg-black/40 rounded-xl p-8 flex flex-col gap-6 shadow-lg border border-[#232329]"

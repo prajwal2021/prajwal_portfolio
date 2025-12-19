@@ -1,11 +1,15 @@
 // import { Encryption } from "@/components/main/encryption";
+import dynamic from "next/dynamic";
 import { Hero } from "@/components/main/hero";
 import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { Experience } from "@/components/main/experience";
 import { Education } from "@/components/main/education";
 import { Testimonials } from "@/components/main/testimonials";
-import { Connect } from "@/components/main/connect";
+
+const Connect = dynamic(() => import("@/components/main/connect").then(mod => ({ default: mod.Connect })), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

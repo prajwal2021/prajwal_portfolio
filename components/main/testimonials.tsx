@@ -86,7 +86,7 @@ export const Testimonials = () => {
             muted
             autoPlay
           >
-            <source src="/videos/move.webm" type="video/webm" />
+            <source src="/videos/move.mp4" type="video/mp4" />
           </video>
         </div>
       </div>

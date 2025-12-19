@@ -22,8 +22,10 @@ export const Navbar = () => {
             alt="Logo"
             width={50}
             height={55}
+            priority
             draggable={false}
             className="cursor-pointer"
+            style={{ width: "auto", height: "auto" }}
           />
           <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">Prajwal S</div>
         </Link>

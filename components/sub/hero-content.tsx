@@ -91,6 +91,7 @@ export const HeroContent = () => {
           width={650}
           draggable={false}
           className="select-none"
+          style={{ width: "auto", height: "auto" }}
         />
       </motion.div>
     </motion.div>
