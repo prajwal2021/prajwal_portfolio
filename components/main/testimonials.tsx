@@ -85,7 +85,6 @@ export const Testimonials = () => {
             loop
             muted
             autoPlay
-            suppressHydrationWarning
           >
             <source src="/videos/move.webm" type="video/webm" />
           </video>

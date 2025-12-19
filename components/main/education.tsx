@@ -38,7 +38,7 @@ export const Education = () => {
               <span className="mr-2">🎓</span>
               <span>BE in Computer Science</span>
             </div>
-            <div className="italic text-gray-400 mb-2">(2016 - 2020) Bangalore,India</div>
+            <div className="italic text-gray-400 mb-2">(2019 - 2023) Bangalore,India</div>
           </div>
         </div>
 

@@ -63,7 +63,6 @@ export const Skills = () => {
             loop
             muted
             autoPlay
-            suppressHydrationWarning
           >
             <source src="/videos/skills-bg.webm" type="video/webm" />
           </video>

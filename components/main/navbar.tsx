@@ -1,6 +1,5 @@
 'use client';
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,16 +7,6 @@ import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
-  
-  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
-    // If we're not on the home page, navigate to home first with hash
-    if (typeof window !== 'undefined' && pathname !== '/') {
-      e.preventDefault();
-      router.push(`/${hash}`);
-    }
-  };
 
   return (
     <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-10">
@@ -25,7 +14,7 @@ export const Navbar = () => {
       <div className="w-full h-full flex items-center justify-between m-auto px-[10px]">
         {/* Logo + Name */}
         <Link
-          href="/#about-me"
+          href="#about-me"
           className="flex items-center"
         >
           <Image
@@ -45,8 +34,7 @@ export const Navbar = () => {
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.title}
-                href={`/${link.link}`}
-                onClick={(e) => handleNavLinkClick(e, link.link)}
+                href={link.link}
                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition px-2"
               >
                 {link.title}
@@ -95,12 +83,9 @@ export const Navbar = () => {
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.title}
-                href={`/${link.link}`}
-                onClick={(e) => {
-                  handleNavLinkClick(e, link.link);
-                  setIsMobileMenuOpen(false);
-                }}
+                href={link.link}
                 className="cursor-pointer hover:text-[rgb(112,66,248)] transition text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.title}
               </Link>

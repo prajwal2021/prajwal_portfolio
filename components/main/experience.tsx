@@ -67,7 +67,7 @@ export const Experience = () => {
             </h3>
             <div className="flex items-center text-gray-300 mb-2">
               <span className="mr-2">📅</span>
-              <span>September 2023 - Present</span>
+              <span>August 2023 - August 2025</span>
             </div>
           
             <ul className="list-disc ml-6 text-lg text-gray-200 space-y-1">
@@ -89,7 +89,6 @@ export const Experience = () => {
             loop
             muted
             autoPlay
-            suppressHydrationWarning
           >
             <source src="/videos/blackhole.webm" type="video/webm" />
           </video>
