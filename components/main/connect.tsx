@@ -5,23 +5,52 @@ import { useState } from "react";
 export const Connect = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    // Clear error when user starts typing
+    if (error) setError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    // You can add your API/email logic here
+    setLoading(true);
+    setError("");
+    setSubmitted(false);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      // Success
+      setSubmitted(true);
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An error occurred. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <section id="connect" className="flex flex-col items-center justify-center py-20 px-4 relative overflow-hidden">
-      <h2 className="text-4xl font-bold text-white mb-8">Get in Touch - Let&apos;s Connect</h2>
+      <h2 className="text-4xl font-bold text-white mb-8 relative z-10">Get in Touch - Let&apos;s Connect</h2>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg bg-black/40 rounded-xl p-8 flex flex-col gap-6 shadow-lg border border-[#232329]"
+        className="w-full max-w-lg bg-black/40 rounded-xl p-8 flex flex-col gap-6 shadow-lg border border-[#232329] relative z-10"
       >
         <input
           type="text"
@@ -52,17 +81,21 @@ export const Connect = () => {
         />
         <button
           type="submit"
-          className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold py-3 rounded-md hover:opacity-90 transition"
+          disabled={loading}
+          className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold py-3 rounded-md hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Send Message
+          {loading ? "Sending..." : "Send Message"}
         </button>
+        {error && (
+          <div className="text-red-400 text-center mt-2 text-sm">{error}</div>
+        )}
         {submitted && (
-          <div className="text-green-400 text-center mt-2">Thank you for reaching out!</div>
+          <div className="text-green-400 text-center mt-2">Thank you for reaching out! I&apos;ll get back to you soon.</div>
         )}
       </form>
 
-      <div className="w-full h-full absolute top-0 left-0">
-        <div className="w-full h-full z-[-1] opacity-40 absolute flex items-center justify-center">
+      <div className="w-full h-full absolute top-0 left-0 pointer-events-none">
+        <div className="w-full h-full z-0 opacity-40 absolute flex items-center justify-center">
           <video
             className="w-full h-full object-cover"
             preload="none"
