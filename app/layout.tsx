@@ -1,0 +1,61 @@
+import type { Metadata, Viewport } from "next";
+import dynamic from "next/dynamic";
+import { Inter } from "next/font/google";
+import type { PropsWithChildren } from "react";
+
+import { Navbar } from "@/components/main/navbar";
+import { ExternalStyles } from "@/components/providers/external-styles";
+import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
+import { siteConfig } from "@/config";
+import { cn } from "@/lib/utils";
+
+import "./globals.css";
+import "./lenis.css";
+
+const StarsCanvas = dynamic(
+  () =>
+    import("@/components/main/star-background").then((m) => ({
+      default: m.StarsCanvas,
+    })),
+  {
+    ssr: false,
+    loading: () => <div className="fixed inset-0 -z-10 pointer-events-none" aria-hidden />,
+  }
+);
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  themeColor: "#030014",
+};
+
+export const metadata: Metadata = {
+  ...siteConfig,
+  icons: {
+    icon: [
+      { url: "/mainlogo.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+  },
+  // External CSS is included in the head tag
+};
+
+export default function RootLayout({ children }: PropsWithChildren) {
+  return (
+    <html lang="en">
+      <body
+        className={cn(
+          "bg-[#030014] overflow-y-scroll overflow-x-hidden",
+          inter.className
+        )}
+      >
+        <ExternalStyles />
+        <SmoothScrollProvider>
+        <StarsCanvas />
+        <Navbar />
+        {children}
+        </SmoothScrollProvider>
+      </body>
+    </html>
+  );
+}

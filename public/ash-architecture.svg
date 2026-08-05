@@ -1,0 +1,176 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#030014"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Ash - Technology Stack & Architecture</text>
+  
+  <!-- Frontend Section -->
+  <g>
+    <rect x="50" y="100" width="300" height="280" rx="15" fill="#2d1b69" stroke="#7c3aed" stroke-width="2"/>
+    <text x="200" y="135" font-size="20" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Frontend</text>
+    
+    <rect x="70" y="160" width="260" height="50" rx="8" fill="#1a0f3f" stroke="#7c3aed" stroke-width="1"/>
+    <text x="200" y="190" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Vanilla JavaScript</text>
+    <text x="200" y="205" font-size="12" fill="#c4b5fd" text-anchor="middle">HTML • CSS • No Framework</text>
+    
+    <rect x="70" y="225" width="260" height="50" rx="8" fill="#1a0f3f" stroke="#7c3aed" stroke-width="1"/>
+    <text x="200" y="255" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Progressive Web App</text>
+    <text x="200" y="270" font-size="12" fill="#c4b5fd" text-anchor="middle">Service Worker • Installable</text>
+    
+    <rect x="70" y="290" width="260" height="50" rx="8" fill="#1a0f3f" stroke="#7c3aed" stroke-width="1"/>
+    <text x="200" y="320" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Offline-First</text>
+    <text x="200" y="335" font-size="12" fill="#c4b5fd" text-anchor="middle">localStorage • Cache Management</text>
+  </g>
+  
+  <!-- Backend & Storage Section -->
+  <g>
+    <rect x="450" y="100" width="300" height="280" rx="15" fill="#1a5f4f" stroke="#2d9b7e" stroke-width="2"/>
+    <text x="600" y="135" font-size="20" font-weight="bold" fill="#b3e5d8" text-anchor="middle">Backend & Storage</text>
+    
+    <rect x="470" y="160" width="260" height="50" rx="8" fill="#0d3d33" stroke="#2d9b7e" stroke-width="1"/>
+    <text x="600" y="190" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Supabase</text>
+    <text x="600" y="205" font-size="12" fill="#b3e5d8" text-anchor="middle">PostgreSQL • Real-time Sync</text>
+    
+    <rect x="470" y="225" width="260" height="50" rx="8" fill="#0d3d33" stroke="#2d9b7e" stroke-width="1"/>
+    <text x="600" y="255" font-size="14" font-weight="bold" fill="white" text-anchor="middle">GitHub Pages</text>
+    <text x="600" y="270" font-size="12" fill="#b3e5d8" text-anchor="middle">Static Hosting • CDN</text>
+    
+    <rect x="470" y="290" width="260" height="50" rx="8" fill="#0d3d33" stroke="#2d9b7e" stroke-width="1"/>
+    <text x="600" y="320" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Cloud Sync</text>
+    <text x="600" y="335" font-size="12" fill="#b3e5d8" text-anchor="middle">Real-time Updates • QR Pairing</text>
+  </g>
+  
+  <!-- AI & Integrations Section -->
+  <g>
+    <rect x="850" y="100" width="300" height="280" rx="15" fill="#0f3a5f" stroke="#2e5a8f" stroke-width="2"/>
+    <text x="1000" y="135" font-size="20" font-weight="bold" fill="#a8c5e0" text-anchor="middle">AI & Integrations</text>
+    
+    <rect x="870" y="160" width="260" height="50" rx="8" fill="#081f38" stroke="#2e5a8f" stroke-width="1"/>
+    <text x="1000" y="190" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Gemini 2.5 Flash</text>
+    <text x="1000" y="205" font-size="12" fill="#a8c5e0" text-anchor="middle">AI Assistant • Context-Aware</text>
+    
+    <rect x="870" y="225" width="260" height="50" rx="8" fill="#081f38" stroke="#2e5a8f" stroke-width="1"/>
+    <text x="1000" y="255" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Canvas LMS iCal API</text>
+    <text x="1000" y="270" font-size="12" fill="#a8c5e0" text-anchor="middle">Deadline Sync • No Auth</text>
+    
+    <rect x="870" y="290" width="260" height="50" rx="8" fill="#081f38" stroke="#2e5a8f" stroke-width="1"/>
+    <text x="1000" y="320" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Web Speech API</text>
+    <text x="1000" y="335" font-size="12" fill="#a8c5e0" text-anchor="middle">Voice Input • Voice Output</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <line x1="350" y1="240" x2="450" y2="240" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="750" y1="240" x2="850" y2="240" stroke="#2d9b7e" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Bottom: Key Features -->
+  <g>
+    <rect x="50" y="450" width="1100" height="300" rx="15" fill="#2a2a2a" stroke="#666" stroke-width="2"/>
+    <text x="600" y="485" font-size="22" font-weight="bold" fill="white" text-anchor="middle">Core Features</text>
+    
+    <g>
+      <rect x="70" y="510" width="230" height="220" rx="10" fill="#3f3f3f" stroke="#666" stroke-width="1"/>
+      <text x="185" y="535" font-size="16" font-weight="bold" fill="#00d4ff" text-anchor="middle">📅 Deadlines</text>
+      <text x="185" y="560" font-size="12" fill="white" text-anchor="middle">Automatic Canvas</text>
+      <text x="185" y="575" font-size="12" fill="white" text-anchor="middle">deadline sync with</text>
+      <text x="185" y="590" font-size="12" fill="white" text-anchor="middle">urgency sorting</text>
+      <text x="185" y="610" font-size="12" fill="#999" text-anchor="middle">• Deadline alerts</text>
+      <text x="185" y="625" font-size="12" fill="#999" text-anchor="middle">• Priority ordering</text>
+      <text x="185" y="640" font-size="12" fill="#999" text-anchor="middle">• Time-based reminders</text>
+      <text x="185" y="655" font-size="12" fill="#999" text-anchor="middle">• Course organization</text>
+      <text x="185" y="670" font-size="12" fill="#999" text-anchor="middle">• Urgency indicators</text>
+      <text x="185" y="685" font-size="12" fill="#999" text-anchor="middle">• Weekly digest</text>
+      <text x="185" y="700" font-size="12" fill="#999" text-anchor="middle">• Daily standup</text>
+      <text x="185" y="715" font-size="12" fill="#999" text-anchor="middle">• AI suggestions</text>
+    </g>
+    
+    <g>
+      <rect x="320" y="510" width="230" height="220" rx="10" fill="#3f3f3f" stroke="#666" stroke-width="1"/>
+      <text x="435" y="535" font-size="16" font-weight="bold" fill="#00ff88" text-anchor="middle">🤖 AI Assistant</text>
+      <text x="435" y="560" font-size="12" fill="white" text-anchor="middle">Context-aware voice</text>
+      <text x="435" y="575" font-size="12" fill="white" text-anchor="middle">and text conversations</text>
+      <text x="435" y="590" font-size="12" fill="white" text-anchor="middle">with Gemini 2.5 Flash</text>
+      <text x="435" y="610" font-size="12" fill="#999" text-anchor="middle">• Voice input & output</text>
+      <text x="435" y="625" font-size="12" fill="#999" text-anchor="middle">• Context awareness</text>
+      <text x="435" y="640" font-size="12" fill="#999" text-anchor="middle">• Personalized answers</text>
+      <text x="435" y="655" font-size="12" fill="#999" text-anchor="middle">• Task prioritization</text>
+      <text x="435" y="670" font-size="12" fill="#999" text-anchor="middle">• Budget suggestions</text>
+      <text x="435" y="685" font-size="12" fill="#999" text-anchor="middle">• GPA projections</text>
+      <text x="435" y="700" font-size="12" fill="#999" text-anchor="middle">• Daily recommendations</text>
+      <text x="435" y="715" font-size="12" fill="#999" text-anchor="middle">• Weekly insights</text>
+    </g>
+    
+    <g>
+      <rect x="570" y="510" width="230" height="220" rx="10" fill="#3f3f3f" stroke="#666" stroke-width="1"/>
+      <text x="685" y="535" font-size="16" font-weight="bold" fill="#ffaa00" text-anchor="middle">💰 Finance & Grades</text>
+      <text x="685" y="560" font-size="12" fill="white" text-anchor="middle">Expense tracking and</text>
+      <text x="685" y="575" font-size="12" fill="white" text-anchor="middle">GPA projections with</text>
+      <text x="685" y="590" font-size="12" fill="white" text-anchor="middle">AI-powered insights</text>
+      <text x="685" y="610" font-size="12" fill="#999" text-anchor="middle">• Spending categories</text>
+      <text x="685" y="625" font-size="12" fill="#999" text-anchor="middle">• Budget tracking</text>
+      <text x="685" y="640" font-size="12" fill="#999" text-anchor="middle">• CSV export</text>
+      <text x="685" y="655" font-size="12" fill="#999" text-anchor="middle">• Visual charts</text>
+      <text x="685" y="670" font-size="12" fill="#999" text-anchor="middle">• GPA calculation</text>
+      <text x="685" y="685" font-size="12" fill="#999" text-anchor="middle">• Grade projections</text>
+      <text x="685" y="700" font-size="12" fill="#999" text-anchor="middle">• Goal-based alerts</text>
+      <text x="685" y="715" font-size="12" fill="#999" text-anchor="middle">• Trend analysis</text>
+    </g>
+    
+    <g>
+      <rect x="820" y="510" width="230" height="220" rx="10" fill="#3f3f3f" stroke="#666" stroke-width="1"/>
+      <text x="935" y="535" font-size="16" font-weight="bold" fill="#ff6699" text-anchor="middle">✅ Tasks & Sync</text>
+      <text x="935" y="560" font-size="12" fill="white" text-anchor="middle">Todo management with</text>
+      <text x="935" y="575" font-size="12" fill="white" text-anchor="middle">cross-device real-time</text>
+      <text x="935" y="590" font-size="12" fill="white" text-anchor="middle">synchronization</text>
+      <text x="935" y="610" font-size="12" fill="#999" text-anchor="middle">• 4 task categories</text>
+      <text x="935" y="625" font-size="12" fill="#999" text-anchor="middle">• Pomodoro timer</text>
+      <text x="935" y="640" font-size="12" fill="#999" text-anchor="middle">• Real-time sync</text>
+      <text x="935" y="655" font-size="12" fill="#999" text-anchor="middle">• Cross-device sync</text>
+      <text x="935" y="670" font-size="12" fill="#999" text-anchor="middle">• QR device pairing</text>
+      <text x="935" y="685" font-size="12" fill="#999" text-anchor="middle">• Offline support</text>
+      <text x="935" y="700" font-size="12" fill="#999" text-anchor="middle">• Auto-backup</text>
+      <text x="935" y="715" font-size="12" fill="#999" text-anchor="middle">• Data recovery</text>
+    </g>
+  </g>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#7c3aed"/>
+    </marker>
+  </defs>
+</svg>
+  <text x="660" y="560" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">Web Speech API</text>
+  <text x="660" y="585" font-size="14" text-anchor="middle" fill="#f0a0c0">Voice input · browser-native</text>
+  
+  <!-- Connections from devices to core -->
+  <line x1="140" y1="180" x2="380" y2="280" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="180" x2="420" y2="280" stroke="#666" stroke-width="2"/>
+  
+  <!-- Connections from core to storage -->
+  <line x1="380" y1="400" x2="140" y2="520" stroke="#888" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="220" y="460" font-size="12" fill="#999">cache</text>
+  
+  <line x1="400" y1="400" x2="400" y2="520" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="410" y="460" font-size="12" fill="#999">serves</text>
+  
+  <!-- Connections from core to external services -->
+  <!-- To Supabase -->
+  <line x1="600" y1="320" x2="820" y2="130" stroke="#888" stroke-width="2"/>
+  <text x="680" y="210" font-size="12" fill="#999">sync</text>
+  
+  <!-- To Gemini -->
+  <line x1="600" y1="340" x2="820" y2="330" stroke="#888" stroke-width="2"/>
+  <text x="680" y="340" font-size="12" fill="#999">chat</text>
+  
+  <!-- To Canvas -->
+  <line x1="600" y1="370" x2="820" y2="480" stroke="#888" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="680" y="430" font-size="12" fill="#999">deadlines</text>
+  
+  <!-- To Web Speech -->
+  <line x1="550" y1="400" x2="660" y2="520" stroke="#888" stroke-width="2"/>
+  <text x="580" y="460" font-size="12" fill="#999">voice</text>
+  
+  <!-- Zero backend servers badge -->
+  <rect x="980" y="680" width="180" height="50" rx="8" fill="none" stroke="#4caf50" stroke-width="2"/>
+  <text x="1070" y="715" font-size="14" text-anchor="middle" fill="#4caf50" font-weight="bold">zero backend servers</text>
+</svg>
